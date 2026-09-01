@@ -1,0 +1,660 @@
+/* =====================================================
+   CAREERGUIDE — CAREER ROADMAP
+   PREMIUM LIGHT WINE THEME
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   MAIN PAGE
+===================================================== */
+
+.roadmap-page {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 10px 0 60px;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8e9ed 0%,
+            #f4dce3 45%,
+            #edd0da 100%
+        );
+
+    overflow: hidden;
+
+    animation: roadmapPageReveal 0.7s ease;
+}
+
+@keyframes roadmapPageReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   DECORATIVE BACKGROUND
+===================================================== */
+
+.roadmap-page::before {
+    content: "";
+
+    position: absolute;
+
+    width: 360px;
+    height: 360px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(100, 21, 47, 0.08);
+
+    top: 80px;
+    left: -190px;
+
+    animation: roadmapFloat 8s ease-in-out infinite;
+}
+
+.roadmap-page::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: rgba(100, 21, 47, 0.045);
+
+    right: -140px;
+    bottom: 80px;
+
+    animation: roadmapFloatReverse 10s ease-in-out infinite;
+}
+
+@keyframes roadmapFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes roadmapFloatReverse {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.roadmap-header {
+    width: 92%;
+    max-width: 1100px;
+
+    margin: 30px auto 25px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    border: 1px solid #ead4dc;
+
+    padding: 32px 30px;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 12px 35px rgba(70, 20, 40, 0.10);
+
+    position: relative;
+
+    z-index: 2;
+
+    backdrop-filter: blur(5px);
+
+    animation: roadmapHeaderReveal 0.8s ease;
+}
+
+@keyframes roadmapHeaderReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   HEADER TITLE
+===================================================== */
+
+.roadmap-header h1 {
+    margin: 0 0 10px;
+
+    color: #64152f;
+
+    font-size: 32px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+}
+
+.roadmap-header p {
+    margin: 0;
+
+    color: #5b464d;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+.view-roadmap-button {
+
+    display: block;
+
+    margin: 0 auto 40px;
+
+    padding: 13px 24px;
+
+    border: 1px solid #d8a9b8;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #f8e9ed
+        );
+
+    color: #64152f;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    position: relative;
+
+    z-index: 3;
+
+    box-shadow:
+        0 7px 18px rgba(80, 25, 45, 0.10);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.view-roadmap-button:hover {
+
+    transform: translateY(-3px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8e8ed,
+            #f2d8e0
+        );
+
+    box-shadow:
+        0 11px 25px rgba(80, 25, 45, 0.16);
+}
+
+
+/* =====================================================
+   ROADMAP STEPS
+===================================================== */
+
+.roadmap-steps {
+
+    width: 92%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =====================================================
+   ROADMAP CARD
+===================================================== */
+
+.roadmap-step {
+
+    background:
+        rgba(255, 255, 255, 0.96);
+
+    border: 1px solid #ead4dc;
+
+    border-left: 5px solid #7c173f;
+
+    border-radius: 20px;
+
+    padding: 30px 28px 27px;
+
+    min-height: 190px;
+
+    position: relative;
+
+    overflow: visible;
+
+    box-shadow:
+        0 8px 25px rgba(70, 20, 40, 0.09);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+
+    animation: roadmapCardReveal 0.6s ease both;
+}
+
+
+/* =====================================================
+   CARD ANIMATION
+===================================================== */
+
+.roadmap-step:nth-child(1) {
+    animation-delay: 0.08s;
+}
+
+.roadmap-step:nth-child(2) {
+    animation-delay: 0.16s;
+}
+
+.roadmap-step:nth-child(3) {
+    animation-delay: 0.24s;
+}
+
+.roadmap-step:nth-child(4) {
+    animation-delay: 0.32s;
+}
+
+.roadmap-step:nth-child(5) {
+    animation-delay: 0.40s;
+}
+
+.roadmap-step:nth-child(6) {
+    animation-delay: 0.48s;
+}
+
+.roadmap-step:nth-child(7) {
+    animation-delay: 0.56s;
+}
+
+.roadmap-step:nth-child(8) {
+    animation-delay: 0.64s;
+}
+
+@keyframes roadmapCardReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   CARD HOVER
+===================================================== */
+
+.roadmap-step:hover {
+
+    transform: translateY(-6px);
+
+    border-color: #c995a7;
+
+    border-left-color: #64152f;
+
+    box-shadow:
+        0 15px 35px rgba(80, 25, 45, 0.15);
+}
+
+
+/* =====================================================
+   STEP NUMBER CIRCLE
+===================================================== */
+
+.roadmap-step::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -14px;
+    left: 20px;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #64152f,
+            #8b2850
+        );
+
+    border: 4px solid #f5dfe5;
+
+    box-shadow:
+        0 6px 15px rgba(80, 20, 45, 0.20);
+
+    animation: stepNumberPulse 3s ease-in-out infinite;
+}
+
+@keyframes stepNumberPulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 6px 15px rgba(80, 20, 45, 0.18);
+    }
+
+    50% {
+        box-shadow:
+            0 8px 20px rgba(80, 20, 45, 0.28);
+    }
+}
+
+
+/* =====================================================
+   STEP HEADING
+===================================================== */
+
+.roadmap-step h3 {
+
+    margin: 4px 0 13px;
+
+    padding-left: 2px;
+
+    color: #64152f;
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    line-height: 1.4;
+}
+
+
+/* =====================================================
+   STEP DESCRIPTION
+===================================================== */
+
+.roadmap-step p {
+
+    margin: 0;
+
+    color: #51434a;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+}
+
+
+/* =====================================================
+   EMPTY / MESSAGE BOX
+===================================================== */
+
+.roadmap-empty {
+
+    width: 92%;
+    max-width: 800px;
+
+    margin: 20px auto;
+
+    padding: 40px 30px;
+
+    text-align: center;
+
+    background:
+        rgba(255, 255, 255, 0.96);
+
+    border: 1px solid #ead4dc;
+
+    border-radius: 20px;
+
+    color: #5b464d;
+
+    box-shadow:
+        0 10px 30px rgba(70, 20, 40, 0.09);
+
+    position: relative;
+
+    z-index: 2;
+
+    animation: roadmapCardReveal 0.6s ease;
+}
+
+.roadmap-empty h3 {
+
+    margin: 0 0 10px;
+
+    color: #64152f;
+
+    font-size: 22px;
+}
+
+.roadmap-empty p {
+
+    margin: 0;
+
+    color: #66545b;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   LOADING STATE
+===================================================== */
+
+.roadmap-header p {
+
+    position: relative;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .roadmap-steps {
+
+        grid-template-columns: 1fr;
+
+        max-width: 700px;
+
+    }
+
+    .roadmap-step {
+
+        min-height: auto;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .roadmap-page {
+
+        padding:
+            5px
+            0
+            40px;
+    }
+
+    .roadmap-header {
+
+        width: 94%;
+
+        margin-top: 20px;
+
+        padding: 25px 18px;
+
+        border-radius: 20px;
+    }
+
+    .roadmap-header h1 {
+
+        font-size: 25px;
+
+    }
+
+    .roadmap-header p {
+
+        font-size: 14px;
+
+    }
+
+    .view-roadmap-button {
+
+        width: 94%;
+
+        margin-bottom: 35px;
+
+    }
+
+    .roadmap-steps {
+
+        width: 94%;
+
+        gap: 20px;
+
+    }
+
+    .roadmap-step {
+
+        padding:
+            28px
+            20px
+            22px;
+
+        border-radius: 18px;
+
+        border-left-width: 4px;
+    }
+
+    .roadmap-step h3 {
+
+        font-size: 18px;
+
+    }
+
+    .roadmap-step p {
+
+        font-size: 14px;
+
+    }
+
+    .roadmap-empty {
+
+        width: 94%;
+
+        padding: 35px 20px;
+
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .roadmap-header h1 {
+
+        font-size: 22px;
+
+    }
+
+    .roadmap-step {
+
+        padding: 27px 17px 20px;
+
+    }
+
+    .roadmap-step h3 {
+
+        font-size: 17px;
+
+    }
+
+}

@@ -1,0 +1,647 @@
+/* =====================================================
+   CAREERGUIDE — PAYMENT SUCCESS PAGE
+   LIGHT WINE + WARM PREMIUM THEME
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   MAIN PAGE
+===================================================== */
+
+.payment-success-page {
+    min-height: 100vh;
+
+    padding: 50px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7e8ed 0%,
+            #f3dce3 45%,
+            #ead0d9 100%
+        );
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =====================================================
+   DECORATIVE BACKGROUND
+===================================================== */
+
+.payment-success-page::before {
+    content: "";
+
+    position: absolute;
+
+    width: 360px;
+    height: 360px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(100, 21, 47, 0.10);
+
+    top: -140px;
+    left: -150px;
+
+    animation: successFloat 9s ease-in-out infinite;
+}
+
+.payment-success-page::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: rgba(100, 21, 47, 0.06);
+
+    right: -120px;
+    bottom: -100px;
+
+    animation: successFloatReverse 10s ease-in-out infinite;
+}
+
+
+@keyframes successFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+}
+
+
+@keyframes successFloatReverse {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.payment-success-container {
+    width: 100%;
+    max-width: 700px;
+
+    position: relative;
+
+    z-index: 2;
+
+    animation: successPageReveal 0.7s ease;
+}
+
+
+@keyframes successPageReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =====================================================
+   SUCCESS ICON
+===================================================== */
+
+.success-icon {
+    width: 88px;
+    height: 88px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #f8e7ec
+        );
+
+    color: #64152f;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 48px;
+    font-weight: 800;
+
+    border: 3px solid #d8a9b8;
+
+    box-shadow:
+        0 12px 30px rgba(100, 21, 47, 0.16);
+
+    animation:
+        successIconPop 0.8s ease,
+        successIconFloat 3s ease-in-out 1s infinite;
+}
+
+
+@keyframes successIconPop {
+
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    70% {
+        transform: scale(1.12);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+@keyframes successIconFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+
+/* =====================================================
+   MAIN TITLE
+===================================================== */
+
+.payment-success-container > h1 {
+    margin: 0 0 10px;
+
+    text-align: center;
+
+    color: #64152f;
+
+    font-size: 32px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.4px;
+}
+
+
+/* =====================================================
+   SUBTITLE
+===================================================== */
+
+.success-subtitle {
+    margin: 0 auto 30px;
+
+    text-align: center;
+
+    color: #5f4850;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    max-width: 560px;
+}
+
+
+/* =====================================================
+   SUCCESS CARD
+===================================================== */
+
+.success-card {
+    background: rgba(255, 255, 255, 0.97);
+
+    border: 1px solid #e5cbd3;
+
+    border-radius: 24px;
+
+    padding: 38px;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 40px rgba(75, 20, 38, 0.14);
+
+    backdrop-filter: blur(6px);
+
+    animation: successCardReveal 0.8s ease 0.15s both;
+}
+
+
+@keyframes successCardReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   CARD ICON
+===================================================== */
+
+.success-card-icon {
+    width: 64px;
+    height: 64px;
+
+    margin: 0 auto 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8e7ec,
+            #f2d4de
+        );
+
+    border: 1px solid #e3becb;
+
+    font-size: 30px;
+
+    box-shadow:
+        0 8px 20px rgba(100, 21, 47, 0.09);
+}
+
+
+/* =====================================================
+   CARD HEADING
+===================================================== */
+
+.success-card h2 {
+    margin: 0 0 8px;
+
+    color: #421421;
+
+    font-size: 24px;
+
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   CARD DESCRIPTION
+===================================================== */
+
+.success-card > p {
+    margin: 0 0 28px;
+
+    color: #66545a;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   APPOINTMENT SUMMARY
+===================================================== */
+
+.appointment-summary {
+    text-align: left;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff9f5,
+            #fdf1f3
+        );
+
+    border: 1px solid #e6cfd6;
+
+    border-radius: 17px;
+
+    padding: 22px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   SUMMARY HEADING
+===================================================== */
+
+.appointment-summary h3 {
+    margin: 0 0 15px;
+
+    color: #64152f;
+
+    font-size: 18px;
+
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   SUMMARY ROW
+===================================================== */
+
+.summary-row {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid #eadde1;
+}
+
+
+.summary-row:last-child {
+    border-bottom: none;
+}
+
+
+/* LEFT SIDE */
+
+.summary-row span {
+    color: #765b64;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* RIGHT SIDE */
+
+.summary-row strong {
+    color: #421421;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    text-align: right;
+}
+
+
+/* =====================================================
+   PAID STATUS
+===================================================== */
+
+.summary-row .paid-status {
+    color: #64152f;
+
+    background: #f4dce4;
+
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   DEMO NOTICE
+===================================================== */
+
+.success-notice {
+    background:
+        linear-gradient(
+            135deg,
+            #fff5df,
+            #fcebd8
+        );
+
+    border: 1px solid #e8cda1;
+
+    color: #704d27;
+
+    border-radius: 12px;
+
+    padding: 14px 16px;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    margin-bottom: 24px;
+
+    text-align: left;
+}
+
+
+/* =====================================================
+   BUTTON AREA
+===================================================== */
+
+.success-buttons {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+/* =====================================================
+   COMMON BUTTON
+===================================================== */
+
+.view-appointments-button,
+.back-dashboard-button {
+    width: 100%;
+
+    border: none;
+
+    border-radius: 12px;
+
+    padding: 14px 18px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* =====================================================
+   VIEW APPOINTMENTS
+===================================================== */
+
+.view-appointments-button {
+    background:
+        linear-gradient(
+            135deg,
+            #64152f,
+            #842342
+        );
+
+    color: white;
+
+    box-shadow:
+        0 7px 18px rgba(100, 21, 47, 0.20);
+}
+
+
+.view-appointments-button:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #521025,
+            #702039
+        );
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(100, 21, 47, 0.27);
+}
+
+
+/* =====================================================
+   BACK DASHBOARD
+===================================================== */
+
+.back-dashboard-button {
+    background: #f5e4e9;
+
+    color: #64152f;
+
+    border: 1px solid #e2c6cf;
+}
+
+
+.back-dashboard-button:hover {
+    background: #ecd4dc;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 18px rgba(100, 21, 47, 0.10);
+}
+
+
+/* =====================================================
+   BUTTON ACTIVE
+===================================================== */
+
+.view-appointments-button:active,
+.back-dashboard-button:active {
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .payment-success-page {
+        padding: 30px 15px;
+    }
+
+
+    .payment-success-container > h1 {
+        font-size: 27px;
+    }
+
+
+    .success-subtitle {
+        font-size: 14px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .success-card {
+        padding: 25px 18px;
+
+        border-radius: 20px;
+    }
+
+
+    .success-card h2 {
+        font-size: 21px;
+    }
+
+
+    .appointment-summary {
+        padding: 18px;
+    }
+
+
+    .summary-row {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 6px;
+    }
+
+
+    .summary-row strong {
+        text-align: left;
+    }
+
+
+    .success-icon {
+        width: 76px;
+        height: 76px;
+
+        font-size: 40px;
+    }
+
+}

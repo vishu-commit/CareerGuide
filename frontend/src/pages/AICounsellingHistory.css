@@ -1,0 +1,822 @@
+/* =====================================================
+   CAREERGUIDE
+   AI COUNSELLING HISTORY
+   LIGHT + PREMIUM WINE THEME
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+.ai-history-page {
+    min-height: 100vh;
+
+    padding: 45px 20px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8f2 0%,
+            #fff3ed 50%,
+            #fdf0f3 100%
+        );
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   BACKGROUND DECORATION
+===================================================== */
+
+.ai-history-page::before {
+    content: "";
+
+    position: absolute;
+
+    width: 360px;
+    height: 360px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(108, 23, 52, 0.08);
+
+    top: 40px;
+    left: -190px;
+
+    animation: historyFloat 8s ease-in-out infinite;
+}
+
+.ai-history-page::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: rgba(142, 39, 72, 0.045);
+
+    right: -130px;
+    bottom: 40px;
+
+    animation: historyFloatReverse 10s ease-in-out infinite;
+}
+
+@keyframes historyFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes historyFloatReverse {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.ai-history-container {
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    position: relative;
+
+    z-index: 2;
+
+    animation: historyPageReveal 0.7s ease;
+}
+
+@keyframes historyPageReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.ai-history-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    background: rgba(255, 255, 255, 0.98);
+
+    border: 1px solid #eadde1;
+
+    border-radius: 24px;
+
+    padding: 30px 34px;
+
+    margin-bottom: 28px;
+
+    box-shadow:
+        0 12px 35px rgba(60, 20, 35, 0.12);
+}
+
+
+/* =====================================================
+   HEADER ICON
+===================================================== */
+
+.ai-history-icon {
+    width: 72px;
+    height: 72px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 21px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #f8e8ed
+        );
+
+    border: 1px solid #ead1d9;
+
+    font-size: 34px;
+
+    box-shadow:
+        0 10px 25px rgba(105, 20, 50, 0.10);
+
+    animation: historyIconFloat 3s ease-in-out infinite;
+}
+
+@keyframes historyIconFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+
+/* =====================================================
+   HEADER TEXT
+===================================================== */
+
+.ai-history-header-text {
+    flex: 1;
+}
+
+.ai-history-header h1 {
+    margin: 0 0 8px;
+
+    color: #64152f;
+
+    font-size: 32px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+}
+
+.ai-history-header p {
+    margin: 0;
+
+    color: #554449;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.ai-history-message {
+    background: rgba(255, 255, 255, 0.98);
+
+    border: 1px solid #eadde1;
+
+    border-radius: 20px;
+
+    padding: 45px 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 30px rgba(60, 20, 35, 0.08);
+}
+
+.history-loader {
+    font-size: 42px;
+
+    margin-bottom: 12px;
+
+    animation: historyIconFloat 1.5s ease-in-out infinite;
+}
+
+.ai-history-message p {
+    margin: 0;
+
+    color: #64152f;
+
+    font-size: 15px;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   ERROR
+===================================================== */
+
+.ai-history-error {
+    background: #ffffff;
+
+    border: 1px solid #efcbd4;
+
+    border-radius: 18px;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    color: #a3314c;
+
+    box-shadow:
+        0 8px 25px rgba(60, 20, 35, 0.07);
+}
+
+.history-error-icon {
+    font-size: 35px;
+
+    margin-bottom: 8px;
+}
+
+.ai-history-error p {
+    margin: 0 0 18px;
+}
+
+.ai-history-error button {
+    border: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            #64152f,
+            #842342
+        );
+
+    color: white;
+
+    padding: 11px 20px;
+
+    border-radius: 11px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   HISTORY LIST
+===================================================== */
+
+.ai-history-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* =====================================================
+   HISTORY CARD
+===================================================== */
+
+.ai-history-card {
+    background: rgba(255, 255, 255, 0.98);
+
+    border: 1px solid #eadde1;
+
+    border-radius: 21px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 9px 27px rgba(60, 20, 35, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+
+    animation: historyCardReveal 0.55s ease;
+}
+
+.ai-history-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #c58b9e;
+
+    box-shadow:
+        0 15px 35px rgba(83, 25, 44, 0.13);
+}
+
+@keyframes historyCardReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   CARD TOP
+===================================================== */
+
+.ai-history-card-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding-bottom: 13px;
+
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid #f0e3e7;
+}
+
+.history-session-number {
+    color: #75203e;
+
+    font-size: 13px;
+
+    font-weight: 800;
+}
+
+.history-date {
+    color: #777777;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   CAREER SECTION
+===================================================== */
+
+.ai-history-career {
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-bottom: 20px;
+}
+
+.history-career-icon {
+    width: 55px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f8e9ed;
+
+    border: 1px solid #ead1d9;
+
+    border-radius: 16px;
+
+    font-size: 25px;
+}
+
+.history-career-label {
+    display: block;
+
+    color: #8a6873;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    margin-bottom: 4px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.4px;
+}
+
+.ai-history-card h2 {
+    margin: 0;
+
+    color: #421421;
+
+    font-size: 24px;
+
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   ANALYSIS
+===================================================== */
+
+.ai-history-analysis {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8f9,
+            #fffdfb
+        );
+
+    border: 1px solid #eedde2;
+
+    border-radius: 15px;
+
+    padding: 17px;
+
+    margin-bottom: 20px;
+}
+
+.analysis-icon {
+    font-size: 21px;
+
+    flex-shrink: 0;
+}
+
+.ai-history-analysis strong {
+    display: block;
+
+    color: #75203e;
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+.ai-history-analysis p {
+    margin: 0;
+
+    color: #4a4144;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   ACTION
+===================================================== */
+
+.ai-history-actions {
+    display: flex;
+
+    justify-content: flex-end;
+}
+
+.ai-history-actions button {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    border: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            #64152f,
+            #842342
+        );
+
+    color: #ffffff;
+
+    padding: 12px 20px;
+
+    border-radius: 12px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 18px rgba(101, 22, 47, 0.18);
+
+    transition: all 0.25s ease;
+}
+
+.ai-history-actions button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 11px 25px rgba(101, 22, 47, 0.26);
+}
+
+.ai-history-actions button span {
+    font-size: 17px;
+
+    transition: transform 0.2s ease;
+}
+
+.ai-history-actions button:hover span {
+    transform: translateX(3px);
+}
+
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+
+.ai-history-empty {
+    background: rgba(255, 255, 255, 0.98);
+
+    border: 1px solid #eadde1;
+
+    border-radius: 22px;
+
+    padding: 55px 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 30px rgba(60, 20, 35, 0.08);
+
+    animation: historyCardReveal 0.6s ease;
+}
+
+.ai-history-empty-icon {
+    width: 78px;
+    height: 78px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #f8e9ed
+        );
+
+    border: 1px solid #ead1d9;
+
+    border-radius: 23px;
+
+    font-size: 36px;
+
+    box-shadow:
+        0 9px 22px rgba(101, 22, 47, 0.10);
+}
+
+.ai-history-empty h2 {
+    margin: 0 0 10px;
+
+    color: #64152f;
+
+    font-size: 25px;
+
+    font-weight: 800;
+}
+
+.ai-history-empty p {
+    max-width: 550px;
+
+    margin: 0 auto 23px;
+
+    color: #555555;
+
+    line-height: 1.7;
+
+    font-size: 14px;
+}
+
+.ai-history-empty button {
+    border: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            #64152f,
+            #842342
+        );
+
+    color: #ffffff;
+
+    padding: 13px 23px;
+
+    border-radius: 12px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 18px rgba(101, 22, 47, 0.18);
+
+    transition: all 0.25s ease;
+}
+
+.ai-history-empty button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 11px 25px rgba(101, 22, 47, 0.25);
+}
+
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+.ai-history-back {
+    display: block;
+
+    margin: 25px auto 0;
+
+    border: none;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    color: #64152f;
+
+    padding: 11px 19px;
+
+    border-radius: 12px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px rgba(60, 20, 35, 0.06);
+
+    transition: all 0.25s ease;
+}
+
+.ai-history-back:hover {
+    transform: translateY(-2px);
+
+    background: #f8e8ed;
+
+    box-shadow:
+        0 8px 20px rgba(80, 25, 45, 0.10);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .ai-history-page {
+        padding: 30px 14px;
+    }
+
+    .ai-history-header {
+        padding: 24px 20px;
+
+        gap: 15px;
+
+        border-radius: 20px;
+    }
+
+    .ai-history-icon {
+        width: 58px;
+        height: 58px;
+
+        border-radius: 17px;
+
+        font-size: 27px;
+    }
+
+    .ai-history-header h1 {
+        font-size: 25px;
+    }
+
+    .ai-history-header p {
+        font-size: 14px;
+    }
+
+    .ai-history-card {
+        padding: 20px;
+
+        border-radius: 18px;
+    }
+
+    .ai-history-card-top {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .ai-history-career {
+        align-items: flex-start;
+    }
+
+    .ai-history-card h2 {
+        font-size: 21px;
+    }
+
+    .ai-history-analysis {
+        padding: 14px;
+    }
+
+    .ai-history-actions {
+        justify-content: stretch;
+    }
+
+    .ai-history-actions button {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .ai-history-empty {
+        padding: 42px 20px;
+    }
+
+    .ai-history-empty button {
+        width: 100%;
+    }
+}

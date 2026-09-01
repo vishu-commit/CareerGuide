@@ -1,0 +1,576 @@
+/* =========================================================
+   CAREERGUIDE - STUDENT LAYOUT
+   PREMIUM WINE + LIGHT BACKGROUND THEME
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MAIN LAYOUT
+========================================================= */
+
+.student-layout {
+    min-height: 100vh;
+
+    display: flex;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8f5 0%,
+            #f9e9ed 50%,
+            #f2dce3 100%
+        );
+
+    color: #421421;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.student-sidebar {
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 250px;
+    height: 100vh;
+
+    padding: 25px 16px;
+
+    display: flex;
+    flex-direction: column;
+
+    background:
+        linear-gradient(
+            180deg,
+            #64152f 0%,
+            #721a38 55%,
+            #551127 100%
+        );
+
+    border-right: 1px solid #4c1024;
+
+    box-shadow:
+        7px 0 30px rgba(60, 15, 32, 0.20);
+
+    z-index: 100;
+
+    overflow-y: auto;
+}
+
+
+/* =========================================================
+   SIDEBAR SCROLLBAR
+========================================================= */
+
+.student-sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.student-sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.student-sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.20);
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.student-brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 8px 10px 25px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.15);
+
+    margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   BRAND ICON
+========================================================= */
+
+.brand-icon {
+    width: 46px;
+    height: 46px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8f5,
+            #f6dce4
+        );
+
+    font-size: 23px;
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.15);
+
+    animation:
+        brandFloat 3s ease-in-out infinite;
+}
+
+
+@keyframes brandFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+
+/* =========================================================
+   BRAND TEXT
+========================================================= */
+
+.student-brand h2 {
+    margin: 0;
+
+    font-size: 21px;
+
+    font-weight: 800;
+
+    color: #ffffff;
+
+    letter-spacing: -0.3px;
+}
+
+
+.student-brand span {
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 12px;
+
+    color: #f0cfd9;
+}
+
+
+/* =========================================================
+   SIDEBAR MENU
+========================================================= */
+
+.student-menu {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   MENU LINKS
+========================================================= */
+
+.menu-link {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 12px 14px;
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    color: #f8e9ed !important;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.20s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   MENU ICON
+========================================================= */
+
+.menu-link span {
+    width: 23px;
+
+    min-width: 23px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 18px;
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+/* =========================================================
+   MENU HOVER
+========================================================= */
+
+.menu-link:hover {
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    color: #ffffff !important;
+
+    transform: translateX(4px);
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+
+.menu-link:hover span {
+    transform: scale(1.12);
+}
+
+
+/* =========================================================
+   ACTIVE MENU
+========================================================= */
+
+.menu-link.active {
+    background:
+        linear-gradient(
+            135deg,
+            #f7dfe6,
+            #f1cbd6
+        );
+
+    color: #64152f !important;
+
+    box-shadow:
+        0 7px 20px rgba(0, 0, 0, 0.16);
+
+    transform: translateX(3px);
+}
+
+
+.menu-link.active span {
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   AI COUNSELLING SPECIAL MENU
+========================================================= */
+
+.ai-menu-link {
+    position: relative;
+}
+
+
+.ai-menu-link::before {
+    content: "";
+
+    width: 4px;
+    height: 0;
+
+    position: absolute;
+
+    left: 0;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    background: #f7c8d7;
+
+    border-radius: 0 5px 5px 0;
+
+    transition:
+        height 0.25s ease;
+}
+
+
+.ai-menu-link:hover::before,
+.ai-menu-link.active::before {
+    height: 60%;
+}
+
+
+.ai-menu-link.active {
+    background:
+        linear-gradient(
+            135deg,
+            #f8e0e7,
+            #edc7d3
+        );
+
+    color: #64152f !important;
+}
+
+
+/* =========================================================
+   LOGOUT
+========================================================= */
+
+.student-logout {
+    width: 100%;
+
+    margin-top: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 12px 14px;
+
+    background: transparent !important;
+
+    background-image: none !important;
+
+    border: 1px solid transparent !important;
+
+    outline: none !important;
+
+    box-shadow: none !important;
+
+    border-radius: 12px;
+
+    color: #ffffff !important;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        transform 0.20s ease;
+}
+
+
+.student-logout span {
+    color: #ffffff !important;
+}
+
+
+.student-logout:hover {
+    background:
+        rgba(255, 255, 255, 0.10) !important;
+
+    background-image: none !important;
+
+    color: #ffffff !important;
+
+    box-shadow: none !important;
+
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   MAIN AREA
+========================================================= */
+
+.student-main {
+    margin-left: 250px;
+
+    width: calc(100% - 250px);
+
+    min-height: 100vh;
+
+    padding: 35px 45px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 250, 248, 0.82),
+            rgba(249, 233, 237, 0.72)
+        );
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.student-topbar {
+    padding-bottom: 22px;
+
+    margin-bottom: 30px;
+
+    border-bottom:
+        1px solid #dfc7cf;
+}
+
+
+.student-topbar h1 {
+    margin: 0;
+
+    color: #64152f;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+}
+
+
+.student-topbar p {
+    margin: 6px 0 0;
+
+    color: #765562;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   PAGE CONTENT
+========================================================= */
+
+.student-page-content {
+    width: 100%;
+
+    animation:
+        contentReveal 0.45s ease;
+}
+
+
+@keyframes contentReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   MOBILE / TABLET
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .student-sidebar {
+        width: 220px;
+    }
+
+
+    .student-main {
+        margin-left: 220px;
+
+        width:
+            calc(100% - 220px);
+
+        padding: 25px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .student-layout {
+        display: block;
+    }
+
+
+    .student-sidebar {
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+
+        min-height: auto;
+
+        border-right: none;
+
+        border-bottom:
+            1px solid #4c1024;
+
+        padding: 20px 15px;
+    }
+
+
+    .student-menu {
+        gap: 5px;
+    }
+
+
+    .student-logout {
+        margin-top: 20px;
+    }
+
+
+    .student-main {
+        margin-left: 0;
+
+        width: 100%;
+
+        padding: 20px 15px;
+    }
+
+
+    .student-topbar h1 {
+        font-size: 25px;
+    }
+}

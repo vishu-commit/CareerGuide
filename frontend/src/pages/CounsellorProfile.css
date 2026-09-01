@@ -1,0 +1,956 @@
+/* =====================================================
+   CAREERGUIDE - COUNSELLOR PROFILE
+   All classes are unique to avoid CSS collisions
+===================================================== */
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.cg-counsellor-page {
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f5f8fc 0%,
+            #fff8ef 100%
+        );
+
+    padding: 25px 0 60px;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   TOP BAR
+===================================================== */
+
+.cg-counsellor-topbar {
+    width: 92%;
+    max-width: 1250px;
+
+    margin: 0 auto 25px;
+
+    padding: 18px 25px;
+
+    background: white;
+
+    border-radius: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 5px 20px rgba(60, 30, 50, 0.07);
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.cg-brand {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.cg-brand-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff0dc;
+
+    border-radius: 14px;
+
+    font-size: 28px;
+}
+
+.cg-brand h2 {
+    margin: 0;
+
+    color: #8b0048;
+
+    font-size: 23px;
+}
+
+.cg-brand span {
+    display: block;
+
+    margin-top: 2px;
+
+    color: #806c72;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+.cg-back-button {
+    border: none;
+
+    background: #8b0048;
+
+    color: white;
+
+    padding: 11px 20px;
+
+    border-radius: 9px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.cg-back-button:hover {
+    background: #690037;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.cg-counsellor-container {
+    width: 92%;
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 45px;
+
+    background: white;
+
+    border-radius: 26px;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 12px 40px rgba(60, 30, 50, 0.09);
+}
+
+
+/* =====================================================
+   PROFILE HEADER
+===================================================== */
+
+.cg-profile-header {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding-bottom: 35px;
+
+    border-bottom: 1px solid #eadfe4;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   AVATAR
+===================================================== */
+
+.cg-avatar {
+    flex-shrink: 0;
+
+    width: 115px;
+    height: 115px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8b0048,
+            #b83c73
+        );
+
+    color: white;
+
+    font-size: 48px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 10px 25px rgba(139, 0, 72, 0.20);
+}
+
+
+/* =====================================================
+   PROFILE HEADING
+===================================================== */
+
+.cg-profile-heading {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.cg-profile-heading h1 {
+    margin: 0 0 7px;
+
+    color: #8b0048;
+
+    font-size: 38px;
+
+    line-height: 1.2;
+}
+
+.cg-specialization {
+    display: inline-block;
+
+    margin-bottom: 13px;
+
+    color: #b73572;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+.cg-profile-heading p {
+    max-width: 750px;
+
+    margin: 0;
+
+    color: #5e5960;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   INFORMATION GRID
+===================================================== */
+
+.cg-info-grid {
+    width: 100%;
+
+    margin-top: 30px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   INFORMATION CARD
+===================================================== */
+
+.cg-info-card {
+    min-width: 0;
+
+    padding: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8e8,
+            #fff2d4
+        );
+
+    border: 1px solid #efd39f;
+
+    border-radius: 17px;
+
+    box-sizing: border-box;
+
+    transition: 0.25s ease;
+}
+
+.cg-info-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(100, 50, 50, 0.08);
+}
+
+
+/* =====================================================
+   INFO ICON
+===================================================== */
+
+.cg-info-icon {
+    flex-shrink: 0;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+
+    border-radius: 12px;
+
+    font-size: 22px;
+}
+
+
+/* =====================================================
+   INFO TEXT
+===================================================== */
+
+.cg-info-card span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #786d72;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.cg-info-card strong {
+    display: block;
+
+    color: #8b0048;
+
+    font-size: 17px;
+
+    line-height: 1.4;
+
+    overflow-wrap: anywhere;
+}
+
+.cg-info-card .cg-email {
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   AVAILABILITY SECTION
+===================================================== */
+
+.cg-availability-section {
+    width: 100%;
+
+    margin-top: 35px;
+
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff9e9,
+            #fff3d8
+        );
+
+    border: 1px solid #efd39f;
+
+    border-radius: 22px;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   SECTION HEADING
+===================================================== */
+
+.cg-section-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 28px;
+}
+
+.cg-section-icon {
+    flex-shrink: 0;
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #8b0048;
+
+    border-radius: 15px;
+
+    font-size: 27px;
+}
+
+.cg-section-heading h2 {
+    margin: 0 0 5px;
+
+    color: #8b0048;
+
+    font-size: 27px;
+}
+
+.cg-section-heading p {
+    margin: 0;
+
+    color: #74686e;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   SLOTS GRID
+===================================================== */
+
+.cg-slots-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   SLOT CARD
+===================================================== */
+
+.cg-slot-card {
+    min-width: 0;
+
+    padding: 23px;
+
+    background: white;
+
+    border: 1px solid #ead5df;
+
+    border-radius: 17px;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 5px 18px rgba(70, 30, 50, 0.07);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.cg-slot-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #c76b96;
+
+    box-shadow:
+        0 12px 28px rgba(139, 0, 72, 0.12);
+}
+
+
+/* =====================================================
+   SLOT TOP
+===================================================== */
+
+.cg-slot-top {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 15px;
+
+    color: #8b0048;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.cg-calendar-icon {
+    font-size: 18px;
+}
+
+
+/* =====================================================
+   SLOT DATE
+===================================================== */
+
+.cg-slot-card h3 {
+    margin: 0 0 15px;
+
+    color: #8b0048;
+
+    font-size: 19px;
+
+    line-height: 1.4;
+
+    word-break: normal;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =====================================================
+   SLOT TIME
+===================================================== */
+
+.cg-slot-time {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 20px;
+
+    color: #554e53;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =====================================================
+   BOOK SLOT BUTTON
+===================================================== */
+
+.cg-book-slot-button {
+    width: 100%;
+
+    padding: 12px 15px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #8b0048;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.cg-book-slot-button:hover {
+    background: #690037;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   NO SLOTS
+===================================================== */
+
+.cg-no-slots {
+    padding: 45px 20px;
+
+    text-align: center;
+
+    background: white;
+
+    border-radius: 17px;
+
+    border: 1px solid #ead5df;
+}
+
+.cg-no-slots div {
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+.cg-no-slots h3 {
+    margin: 0 0 8px;
+
+    color: #8b0048;
+
+    font-size: 20px;
+}
+
+.cg-no-slots p {
+    margin: 0;
+
+    color: #70676c;
+}
+
+
+/* =====================================================
+   BOTTOM ACTION
+===================================================== */
+
+.cg-bottom-action {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 30px;
+}
+
+.cg-main-book-button {
+    min-width: 300px;
+
+    padding: 15px 25px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8b0048,
+            #a90058
+        );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(139, 0, 72, 0.20);
+
+    transition: 0.25s ease;
+}
+
+.cg-main-book-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(139, 0, 72, 0.25);
+}
+
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.counsellor-profile-loading {
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #f5f8fc;
+
+    text-align: center;
+}
+
+.loading-spinner {
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+.counsellor-profile-loading h2 {
+    margin: 0 0 8px;
+
+    color: #8b0048;
+}
+
+.counsellor-profile-loading p {
+    margin: 0;
+
+    color: #6b6368;
+}
+
+
+/* =====================================================
+   ERROR
+===================================================== */
+
+.counsellor-profile-error {
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+    background: #f5f8fc;
+
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+.error-icon {
+    font-size: 50px;
+
+    margin-bottom: 10px;
+}
+
+.counsellor-profile-error h2 {
+    margin: 0 0 10px;
+
+    color: #8b0048;
+}
+
+.counsellor-profile-error p {
+    margin: 0 0 20px;
+
+    color: #6b6368;
+}
+
+.counsellor-profile-error button {
+    border: none;
+
+    background: #8b0048;
+
+    color: white;
+
+    padding: 12px 22px;
+
+    border-radius: 9px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   LARGE SCREEN
+===================================================== */
+
+@media (min-width: 1400px) {
+
+    .cg-counsellor-container {
+        max-width: 1300px;
+    }
+
+    .cg-slots-grid {
+        grid-template-columns:
+            repeat(4, minmax(0, 1fr));
+    }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .cg-counsellor-container {
+        padding: 35px;
+    }
+
+    .cg-info-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .cg-slots-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* =====================================================
+   SMALL TABLET
+===================================================== */
+
+@media (max-width: 750px) {
+
+    .cg-counsellor-topbar {
+        width: 94%;
+    }
+
+    .cg-counsellor-container {
+        width: 94%;
+        padding: 28px;
+    }
+
+    .cg-profile-header {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .cg-profile-heading p {
+        margin: 0 auto;
+    }
+
+    .cg-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cg-slots-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 550px) {
+
+    .cg-counsellor-page {
+        padding: 15px 0 35px;
+    }
+
+    .cg-counsellor-topbar {
+        width: 94%;
+
+        padding: 14px 15px;
+
+        gap: 10px;
+    }
+
+    .cg-brand-icon {
+        width: 42px;
+        height: 42px;
+
+        font-size: 22px;
+    }
+
+    .cg-brand h2 {
+        font-size: 19px;
+    }
+
+    .cg-back-button {
+        padding: 9px 12px;
+
+        font-size: 12px;
+    }
+
+    .cg-counsellor-container {
+        width: 94%;
+
+        padding: 22px 16px;
+
+        border-radius: 20px;
+    }
+
+    .cg-avatar {
+        width: 90px;
+        height: 90px;
+
+        font-size: 36px;
+
+        border-radius: 20px;
+    }
+
+    .cg-profile-heading h1 {
+        font-size: 28px;
+    }
+
+    .cg-specialization {
+        font-size: 16px;
+    }
+
+    .cg-profile-heading p {
+        font-size: 14px;
+    }
+
+    .cg-info-card {
+        padding: 18px;
+    }
+
+    .cg-availability-section {
+        padding: 20px 15px;
+
+        border-radius: 18px;
+    }
+
+    .cg-section-heading {
+        align-items: flex-start;
+    }
+
+    .cg-section-icon {
+        width: 45px;
+        height: 45px;
+
+        font-size: 22px;
+    }
+
+    .cg-section-heading h2 {
+        font-size: 21px;
+    }
+
+    .cg-section-heading p {
+        font-size: 13px;
+    }
+
+    .cg-slot-card {
+        padding: 20px;
+    }
+
+    .cg-main-book-button {
+        width: 100%;
+
+        min-width: 0;
+    }
+}

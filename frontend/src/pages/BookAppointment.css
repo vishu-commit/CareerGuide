@@ -1,0 +1,863 @@
+/* =====================================================
+   CAREERGUIDE — BOOK APPOINTMENT
+   PREMIUM LIGHT WINE THEME
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.book-appointment-page {
+    min-height: 100vh;
+
+    padding: 45px 20px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8e3e9 0%,
+            #efd0da 45%,
+            #e7c0cd 100%
+        );
+
+    position: relative;
+
+    overflow: hidden;
+
+    animation: pageFadeIn 0.8s ease-out;
+}
+
+
+/* =====================================================
+   BACKGROUND DECORATION
+===================================================== */
+
+.book-appointment-page::before {
+    content: "";
+
+    position: absolute;
+
+    width: 380px;
+    height: 380px;
+
+    border-radius: 50%;
+
+    border: 2px solid rgba(100, 21, 47, 0.12);
+
+    background: rgba(255, 255, 255, 0.16);
+
+    top: 30px;
+    left: -200px;
+
+    animation: bookingCircleOne 9s ease-in-out infinite;
+}
+
+.book-appointment-page::after {
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    border-radius: 50%;
+
+    background: rgba(100, 21, 47, 0.08);
+
+    right: -150px;
+    bottom: 20px;
+
+    animation: bookingCircleTwo 11s ease-in-out infinite;
+}
+
+
+/* =====================================================
+   PAGE ANIMATION
+===================================================== */
+
+@keyframes pageFadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes bookingCircleOne {
+
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(25px, -20px) rotate(8deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+
+@keyframes bookingCircleTwo {
+
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(-20px, 20px) scale(1.08);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.book-appointment-container {
+    width: 100%;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.book-header {
+    margin-bottom: 30px;
+
+    animation:
+        headerSlideDown 0.7s ease-out;
+}
+
+
+@keyframes headerSlideDown {
+
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+.book-back-button {
+    border: 1px solid #d8b3bf;
+
+    background: rgba(255, 255, 255, 0.82);
+
+    color: #64152f;
+
+    padding: 11px 18px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin-bottom: 25px;
+
+    transition:
+        all 0.3s ease;
+
+    box-shadow:
+        0 6px 18px rgba(80, 25, 45, 0.08);
+
+    animation:
+        backButtonReveal 0.6s ease-out;
+}
+
+
+.book-back-button:hover {
+
+    background: #ffffff;
+
+    border-color: #a85b77;
+
+    transform: translateX(-5px);
+
+    box-shadow:
+        0 10px 24px rgba(80, 25, 45, 0.14);
+}
+
+
+@keyframes backButtonReveal {
+
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* =====================================================
+   HEADER TITLE
+===================================================== */
+
+.book-header h1 {
+    margin: 0 0 9px;
+
+    color: #64152f;
+
+    font-size: 32px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+
+    text-shadow:
+        0 2px 8px rgba(100, 21, 47, 0.08);
+}
+
+
+/* =====================================================
+   HEADER DESCRIPTION
+===================================================== */
+
+.book-header p {
+    margin: 0;
+
+    color: #634952;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   BOOKING CARD
+===================================================== */
+
+.booking-card {
+    background: rgba(255, 255, 255, 0.97);
+
+    border: 1px solid #ead4dc;
+
+    border-radius: 24px;
+
+    padding: 36px;
+
+    box-shadow:
+        0 15px 45px rgba(70, 20, 40, 0.15);
+
+    backdrop-filter: blur(6px);
+
+    animation:
+        cardSlideUp 0.8s ease-out;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+.booking-card:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 22px 50px rgba(70, 20, 40, 0.19);
+}
+
+
+@keyframes cardSlideUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =====================================================
+   BOOKING ICON
+===================================================== */
+
+.booking-icon {
+    width: 72px;
+    height: 72px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #f4dce4
+        );
+
+    border: 1px solid #e3c3cd;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 35px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 10px 25px rgba(100, 21, 47, 0.12);
+
+    animation:
+        iconAppear 0.8s ease-out,
+        iconFloat 3s ease-in-out 0.8s infinite;
+}
+
+
+@keyframes iconAppear {
+
+    from {
+        opacity: 0;
+        transform: scale(0.5) rotate(-10deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}
+
+
+@keyframes iconFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+
+/* =====================================================
+   CARD TITLE
+===================================================== */
+
+.booking-card h2 {
+    margin: 0 0 8px;
+
+    color: #421421;
+
+    font-size: 25px;
+
+    font-weight: 800;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.booking-description {
+    color: #6a535a;
+
+    margin: 0 0 30px;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   FORM FIELD
+===================================================== */
+
+.booking-field {
+    margin-bottom: 22px;
+
+    animation:
+        fieldReveal 0.6s ease-out both;
+}
+
+
+.booking-field:nth-of-type(1) {
+    animation-delay: 0.2s;
+}
+
+
+.booking-field:nth-of-type(2) {
+    animation-delay: 0.35s;
+}
+
+
+@keyframes fieldReveal {
+
+    from {
+        opacity: 0;
+        transform: translateX(-18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* =====================================================
+   LABEL
+===================================================== */
+
+.booking-field label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #4b343c;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   INPUT
+===================================================== */
+
+.booking-field input {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border: 1px solid #d9c1c9;
+
+    border-radius: 12px;
+
+    background: #fffdfd;
+
+    color: #3f3035;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.25s ease,
+        background 0.3s ease;
+}
+
+
+.booking-field input:hover {
+
+    border-color: #bd8c9e;
+
+}
+
+
+.booking-field input:focus {
+
+    border-color: #8a2949;
+
+    background: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 0 3px rgba(138, 41, 73, 0.11);
+}
+
+
+/* =====================================================
+   CALENDAR ICON
+===================================================== */
+
+.booking-field input::-webkit-calendar-picker-indicator {
+
+    cursor: pointer;
+
+    opacity: 0.7;
+
+}
+
+
+/* =====================================================
+   FEE BOX
+===================================================== */
+
+.booking-fee {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff5f2,
+            #f9e7eb
+        );
+
+    border: 1px solid #e7cdd5;
+
+    padding: 18px 20px;
+
+    border-radius: 14px;
+
+    margin: 26px 0;
+
+    box-shadow:
+        0 6px 18px rgba(80, 30, 45, 0.06);
+
+    animation:
+        feeReveal 0.7s ease-out 0.45s both;
+}
+
+
+@keyframes feeReveal {
+
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* =====================================================
+   FEE LABEL
+===================================================== */
+
+.booking-fee span {
+
+    color: #684b55;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   FEE AMOUNT
+===================================================== */
+
+.booking-fee strong {
+
+    color: #7c173f;
+
+    font-size: 23px;
+
+    font-weight: 800;
+
+    animation:
+        feePulse 2.5s ease-in-out 1.2s infinite;
+}
+
+
+@keyframes feePulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.06);
+    }
+}
+
+
+/* =====================================================
+   MESSAGE
+===================================================== */
+
+.booking-message {
+
+    padding: 14px 16px;
+
+    background: #fcefe2 !important;
+
+    border: 1px solid #e8cba7;
+
+    border-radius: 12px;
+
+    color: #7c4a03 !important;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+
+    margin-bottom: 20px;
+
+    animation:
+        messageAppear 0.4s ease-out;
+}
+
+
+@keyframes messageAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =====================================================
+   PAYMENT BUTTON
+===================================================== */
+
+.confirm-booking-button {
+
+    width: 100%;
+
+    border: none;
+
+    border-radius: 13px;
+
+    padding: 15px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #64152f,
+            #842342
+        );
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+
+    box-shadow:
+        0 9px 22px rgba(101, 22, 47, 0.22);
+
+    animation:
+        buttonReveal 0.7s ease-out 0.6s both;
+}
+
+
+@keyframes buttonReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.confirm-booking-button:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.01);
+
+    background:
+        linear-gradient(
+            135deg,
+            #571126,
+            #75203e
+        );
+
+    box-shadow:
+        0 14px 30px rgba(101, 22, 47, 0.30);
+}
+
+
+.confirm-booking-button:active {
+
+    transform:
+        translateY(-1px)
+        scale(0.995);
+
+}
+
+
+.confirm-booking-button:disabled {
+
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .book-appointment-page {
+        padding: 30px 14px;
+    }
+
+    .booking-card {
+        padding: 25px 20px;
+
+        border-radius: 20px;
+    }
+
+    .book-header h1 {
+        font-size: 26px;
+    }
+
+    .book-header p {
+        font-size: 14px;
+    }
+
+    .booking-icon {
+        width: 62px;
+        height: 62px;
+
+        font-size: 30px;
+
+        border-radius: 18px;
+    }
+
+    .booking-card h2 {
+        font-size: 22px;
+    }
+
+    .booking-fee {
+        padding: 16px;
+    }
+
+    .booking-fee strong {
+        font-size: 20px;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .book-appointment-page {
+        padding: 25px 12px;
+    }
+
+    .booking-card {
+        padding: 22px 17px;
+    }
+
+    .book-back-button {
+        margin-bottom: 20px;
+    }
+
+    .book-header h1 {
+        font-size: 23px;
+    }
+
+    .booking-fee {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+}
+
+
+/* =====================================================
+   REDUCED MOTION ACCESSIBILITY
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+
+    }
+}

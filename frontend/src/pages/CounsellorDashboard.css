@@ -1,0 +1,644 @@
+/* =========================================
+   COUNSELLOR DASHBOARD
+========================================= */
+
+.counsellor-dashboard {
+    min-height: 100vh;
+    background: #fff8ed;
+    color: #3f2933;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.counsellor-header {
+    background: linear-gradient(
+        135deg,
+        #8b004b,
+        #b00062
+    );
+
+    color: white;
+
+    padding: 25px 45px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow: 0 5px 20px rgba(130, 3, 69, 0.15);
+}
+
+.counsellor-header h1 {
+    margin: 0 0 6px;
+
+    font-size: 27px;
+}
+
+.counsellor-header p {
+    margin: 0;
+
+    opacity: 0.9;
+
+    font-size: 14px;
+}
+
+
+.counsellor-logout {
+    border: none;
+
+    background: white;
+
+    color: #820345;
+
+    padding: 11px 18px;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.counsellor-logout:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.counsellor-main {
+    width: 90%;
+
+    max-width: 1200px;
+
+    margin: 35px auto;
+}
+
+
+.welcome-section {
+    margin-bottom: 25px;
+}
+
+.welcome-section h2 {
+    margin: 0 0 8px;
+
+    color: #820345;
+
+    font-size: 30px;
+}
+
+.welcome-section p {
+    margin: 0;
+
+    color: #6b5b62;
+}
+
+
+/* =========================================
+   QUICK ACTION
+========================================= */
+
+.quick-actions {
+    margin-bottom: 25px;
+}
+
+.quick-actions button {
+    background: #820345;
+
+    color: white;
+
+    border: none;
+
+    padding: 13px 20px;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.quick-actions button:hover {
+    background: #680338;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.counsellor-message {
+    background: #fff0d2;
+
+    border: 1px solid #f1cc86;
+
+    color: #7b4b00;
+
+    padding: 14px 18px;
+
+    border-radius: 10px;
+
+    margin-bottom: 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    font-weight: bold;
+}
+
+.counsellor-message button {
+    border: none;
+
+    background: transparent;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    color: #7b4b00;
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.counsellor-stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 35px;
+}
+
+
+.stat-card {
+    background: white;
+
+    border: 1px solid #ead3de;
+
+    border-radius: 16px;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    box-shadow:
+        0 5px 18px rgba(60, 30, 45, 0.07);
+}
+
+
+.stat-icon {
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 13px;
+
+    background: #f8e5ee;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+
+.stat-card span {
+    display: block;
+
+    color: #777;
+
+    font-size: 13px;
+
+    margin-bottom: 5px;
+}
+
+
+.stat-card strong {
+    display: block;
+
+    color: #820345;
+
+    font-size: 25px;
+}
+
+
+/* =========================================
+   APPOINTMENTS SECTION
+========================================= */
+
+.appointments-section {
+    background: white;
+
+    border: 1px solid #ead3de;
+
+    border-radius: 20px;
+
+    padding: 28px;
+
+    box-shadow:
+        0 7px 22px rgba(60, 30, 45, 0.07);
+}
+
+
+.section-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+
+.section-header h2 {
+    margin: 0 0 5px;
+
+    color: #820345;
+
+    font-size: 24px;
+}
+
+
+.section-header p {
+    margin: 0;
+
+    color: #777;
+}
+
+
+.refresh-button {
+    background: #fff0d2;
+
+    color: #820345;
+
+    border: 1px solid #efcf9a;
+
+    padding: 10px 16px;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   APPOINTMENT CARD
+========================================= */
+
+.appointment-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+.appointment-card {
+    border: 1px solid #ead3de;
+
+    border-radius: 15px;
+
+    padding: 22px;
+
+    background: #fffdf9;
+
+    transition: 0.3s;
+}
+
+
+.appointment-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 22px rgba(130, 3, 69, 0.08);
+}
+
+
+.appointment-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+
+.appointment-id {
+    color: #8b6b79;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+.appointment-top h3 {
+    margin: 6px 0 0;
+
+    color: #3f2933;
+
+    font-size: 20px;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.status-badge {
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    text-transform: capitalize;
+}
+
+
+.status-pending {
+    background: #fff3c7;
+
+    color: #8a6200;
+}
+
+
+.status-approved {
+    background: #dcfce7;
+
+    color: #166534;
+}
+
+
+.status-rejected {
+    background: #fee2e2;
+
+    color: #991b1b;
+}
+
+
+.status-completed {
+    background: #f3e8ff;
+
+    color: #6b21a8;
+}
+
+
+/* =========================================
+   DETAILS
+========================================= */
+
+.appointment-details {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+.appointment-details div {
+    background: #fff5e6;
+
+    border-radius: 10px;
+
+    padding: 13px;
+}
+
+
+.appointment-details span {
+    display: block;
+
+    color: #777;
+
+    font-size: 12px;
+
+    margin-bottom: 6px;
+}
+
+
+.appointment-details strong {
+    color: #4b3540;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.appointment-actions {
+    display: flex;
+
+    gap: 10px;
+
+    align-items: center;
+
+    border-top: 1px solid #eee;
+
+    padding-top: 17px;
+}
+
+
+.appointment-actions button {
+    border: none;
+
+    padding: 10px 17px;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.approve-button {
+    background: #dcfce7;
+
+    color: #166534;
+}
+
+
+.approve-button:hover {
+    background: #bbf7d0;
+}
+
+
+.reject-button {
+    background: #fee2e2;
+
+    color: #991b1b;
+}
+
+
+.reject-button:hover {
+    background: #fecaca;
+}
+
+
+.complete-button {
+    background: #820345;
+
+    color: white;
+}
+
+
+.complete-button:hover {
+    background: #680338;
+}
+
+
+.completed-text {
+    color: #6b21a8;
+
+    font-weight: bold;
+}
+
+
+.rejected-text {
+    color: #991b1b;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   EMPTY
+========================================= */
+
+.empty-state {
+    text-align: center;
+
+    padding: 60px 20px;
+
+    border: 1px dashed #e5ccd8;
+
+    border-radius: 15px;
+
+    background: #fffaf5;
+}
+
+
+.empty-icon {
+    font-size: 45px;
+
+    margin-bottom: 12px;
+}
+
+
+.empty-state h3 {
+    margin: 0 0 7px;
+
+    color: #820345;
+}
+
+
+.empty-state p {
+    margin: 0;
+
+    color: #777;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .counsellor-stats {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .appointment-details {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .counsellor-header {
+        padding: 20px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .counsellor-main {
+        width: 92%;
+    }
+
+    .counsellor-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .section-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .appointment-top {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+    .appointment-actions {
+        flex-wrap: wrap;
+    }
+}
